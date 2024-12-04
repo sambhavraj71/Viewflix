@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Movies</title>
+    <link rel="icon" type="image/png" href="viewflixlogo.webp">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: black;
+            color: white;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .left h1 {
+            color: red;
+        }
+
+        .right img {
+            width: 50px;
+        }
+
+        .A2Z, .M24M, .Upcoming {
+            font-family: 'Courier New', Courier, monospace;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        .slideMov, .slideMov2 {
+            display: flex;
+            overflow-x: scroll;
+            padding: 10px 0;
+            gap: 10px;
+            scroll-snap-type: x mandatory;
+        }
+
+        .slideMov img, .slideMov2 img {
+            width: 100px;
+            height: 150px;
+            object-fit: cover;
+            border: 5px solid gold;
+            scroll-snap-align: center;
+        }
+
+        .A2Z, .M24M, .Upcoming {
+            text-align: left;
+            margin-bottom: 10px;
+            font-size: 24px;
+            color: gold;
+        }
+
+        @media (max-width: 768px) {
+            .movie img {
+                width: 45%;
+                height: auto;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .movie img {
+                width: 90%;
+            }
+        }
+
+
+
+
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+        }
+
+        footer h2 {
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+
+        footer p {
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+        .contact-info {
+            margin-bottom: 20px;
+        }
+
+        .contact-info a {
+            color: #ffcc00;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+
+        .thanks {
+            font-size: 18px;
+            color: #ffcc00;
+        }
+
+        .social-icons {
+            margin-top: 20px;
+        }
+
+        .social-icons a {
+            color: white;
+            margin: 0 15px;
+            font-size: 20px;
+            text-decoration: none;
+        }
+
+        .social-icons a:hover {
+            color: #ffcc00;
+        }
+
+        .social-icons a {
+            text-decoration: none;
+            color: #333;
+            font-size: 24px;
+            margin: 0 10px;
+        }
+        .social-icons a:hover {
+            color: #0073e6; /* Change color on hover */
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="left">
+            <h1>Viewflix</h1>
+            <p>An online platform to watch movies & web series.</p>
+        </div>
+        <div class="right">
+            <img src="viewflixlogo.webp" alt="Viewflix Logo">
+        </div>
+    </div>
+
+    <div class="A2Z">
+        <h1><b>A to Z movies</b></h1>
+        <div class="slideMov">
+            <a href="https://t.me/Moviescreen024/513"><img src="https://upload.wikimedia.org/wikipedia/en/d/df/3_idiots_poster.jpg" alt="Movie 1"></a>
+            <a href="https://t.me/Moviescreen024/514"><img src="https://upload.wikimedia.org/wikipedia/en/thumb/4/4f/Aashiqui_2.jpeg/220px-Aashiqui_2.jpeg" alt="Movie 2"></a>
+            <a href="https://t.me/Moviescreen024/516"><img src="https://upload.wikimedia.org/wikipedia/en/d/dc/Anjaam_%28movie_poster%29.jpg" alt="Movie 3"></a>
+            <a href="https://t.me/Moviescreen024/517"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS25BYD4l5oEnErO6iUym3W-APDzt0IPwCe_Q&s" alt="Movie 4"></a>
+            <a href="https://t.me/Moviescreen024/518"><img src="https://upload.wikimedia.org/wikipedia/en/9/93/Baahubali_2_The_Conclusion_poster.jpg" alt="Movie 5"></a>
+            <a href="https://t.me/Moviescreen024/520"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNrYNViEos4w8SFb8bW3XuoHTlMYGqyvS74Q&s" alt="Movie 6"></a>
+            <a href="https://t.me/Moviescreen024/521"><img src="https://upload.wikimedia.org/wikipedia/en/1/1d/Band_Baaja_Baaraat_poster.jpg" alt="Movie 7"></a>
+            <a href="https://t.me/Moviescreen024/522"><img src="https://upload.wikimedia.org/wikipedia/en/thumb/2/2e/Barfi%21_poster.jpg/220px-Barfi%21_poster.jpg" alt="Movie 8"></a>
+            <a href="https://t.me/Moviescreen024/523"><img src="https://upload.wikimedia.org/wikipedia/en/thumb/e/e4/Bhool_Bhulaiyaa_3_poster.jpg/220px-Bhool_Bhulaiyaa_3_poster.jpg" alt="Movie 9"></a>
+            <a href="https://t.me/Moviescreen024/524"><img src="https://upload.wikimedia.org/wikipedia/en/6/6f/Bhool_bhulaiyaa.jpg" alt="Movie 10"></a>
+            <a href="https://t.me/Moviescreen024/525"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQOiK7qSwGyULmPkjTGbDaR_0UdPzKEizzuA&s" alt="Movie 11"></a>
+            <a href="https://t.me/Moviescreen024/526"><img src="https://upload.wikimedia.org/wikipedia/en/e/ea/Brahmastra_Part_One_Shiva.jpg" alt="Movie 12"></a>
+            <a href="https://t.me/Moviescreen024/527"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT71MfITEZfj1f77vYdqVr137auCUBFwXgoqg&s" alt="Movie 13"></a>
+            <a href="https://t.me/Moviescreen024/528"><img src="https://upload.wikimedia.org/wikipedia/en/thumb/1/1b/Chennai_Express.jpg/220px-Chennai_Express.jpg" alt="Movie 14"></a>
+            <a href="https://t.me/Moviescreen024/529"><img src="https://upload.wikimedia.org/wikipedia/en/thumb/3/3d/Chhichhore_Poster.jpg/220px-Chhichhore_Poster.jpg" alt="Movie 15"></a>
+            <a href="https://t.me/Moviescreen024/530"><img src="https://upload.wikimedia.org/wikipedia/en/5/5d/Cocktail_2012_poster.jpg" alt="Movie 16"></a>
+            <a href="https://t.me/Moviescreen024/531"><img src="https://upload.wikimedia.org/wikipedia/en/thumb/9/99/Dangal_Poster.jpg/220px-Dangal_Poster.jpg" alt="Movie 17"></a>
+            <a href="https://t.me/Moviescreen024/532"><img src="https://upload.wikimedia.org/wikipedia/en/c/c7/Deewaar_poster.jpg" alt="Movie 18"></a>
+            <a href="https://t.me/Moviescreen024/533"><img src="https://upload.wikimedia.org/wikipedia/en/thumb/d/db/Dil_Chahta_Hai.jpg/220px-Dil_Chahta_Hai.jpg" alt="Movie 19"></a>
+            <a href="https://t.me/Moviescreen024/534"><img src="https://upload.wikimedia.org/wikipedia/en/7/7a/Dil_Se_poster.jpg" alt="Movie 20"></a>
+            <a href="https://t.me/Moviescreen024/535"><img src="https://upload.wikimedia.org/wikipedia/en/8/80/Dilwale_Dulhania_Le_Jayenge_poster.jpg" alt="Movie 21"></a>
+            <a href="https://t.me/Moviescreen024/536"><img src="https://upload.wikimedia.org/wikipedia/en/8/8a/Drishyam_2015_film.jpg" alt="Movie 22"></a>
+            <a href="https://t.me/Moviescreen024/537"><img src="https://upload.wikimedia.org/wikipedia/en/thumb/9/9e/Drishyam_2_2022_film_poster.jpg/220px-Drishyam_2_2022_film_poster.jpg" alt="Movie 23"></a>
+            <a href="https://t.me/Moviescreen024/538"><img src="https://upload.wikimedia.org/wikipedia/en/7/76/Dum_Laga_Ke_Haisha_%282015_film%29.jpeg" alt="Movie 24"></a>
+            <a href="https://t.me/Moviescreen024/540"><img src="https://upload.wikimedia.org/wikipedia/en/2/2d/Ek_Tha_Tiger_theatrical_poster.jpg" alt="Movie 25"></a>
+            <a href="https://t.me/Moviescreen024/541"><img src="https://upload.wikimedia.org/wikipedia/en/c/c7/Gabbar_is_back_first_look.jpg" alt="Movie 26"></a>
+            <a href="https://t.me/Moviescreen024/542"><img src="https://upload.wikimedia.org/wikipedia/en/6/6a/Gangs_of_Wasseypur_poster.jpg" alt="Movie 27"></a>
+            <a href="https://t.me/Moviescreen024/543"><img src="https://upload.wikimedia.org/wikipedia/en/5/58/Gangs_of_wasseypur_II.jpg" alt="Movie 28"></a>
+            <a href="https://t.me/Moviescreen024/544"><img src="https://upload.wikimedia.org/wikipedia/en/0/07/Gully_Boy_poster.jpg" alt="Movie 29"></a>
+            <a href="https://t.me/Moviescreen024/545"><img src="https://upload.wikimedia.org/wikipedia/en/4/49/Ajay_Devgn%27s_Golmaal_Again_poster.jpg" alt="Movie 30"></a>
+            <a href="https://t.me/Moviescreen024/546"><img src="https://upload.wikimedia.org/wikipedia/en/f/f4/Golmaal_3.jpg" alt="Movie 31"></a>
+            <a href="https://t.me/Moviescreen024/547"><img src="https://upload.wikimedia.org/wikipedia/en/d/dc/Golmaalreturns1.jpg" alt="Movie 32"></a>
+            <a href="https://t.me/Moviescreen024/548"><img src="https://upload.wikimedia.org/wikipedia/en/b/b4/Golmaal-Fun_Unlimited.jpg" alt="Movie 33"></a>
+            <a href="https://t.me/Moviescreen024/549"><img src="https://upload.wikimedia.org/wikipedia/en/f/f8/Venkatesh%27s_Guru_poster.jpg" alt="Movie 34"></a>
+            <a href="https://t.me/Moviescreen024/550"><img src="https://upload.wikimedia.org/wikipedia/en/thumb/a/a5/Hera_Pheri_2000_poster.jpg/220px-Hera_Pheri_2000_poster.jpg" alt="Movie 35"></a>
+            <a href="https://t.me/Moviescreen024/551"><img src="https://upload.wikimedia.org/wikipedia/en/3/3a/Still-phir-hera-phir.jpg" alt="Movie 36"></a>
+            <a href="https://t.me/Moviescreen024/553"><img src="https://upload.wikimedia.org/wikipedia/en/8/87/Hum_Aapke_Hain_Koun.._poster.jpg" alt="Movie 37"></a>
+            <a href="https://t.me/Moviescreen024/554"><img src="https://upload.wikimedia.org/wikipedia/en/thumb/2/2f/Hum_Dil_De_Chuke_Sanam.jpg/220px-Hum_Dil_De_Chuke_Sanam.jpg" alt="Movie 38"></a>
+            <a href="https://t.me/Moviescreen024/555"><img src="https://upload.wikimedia.org/wikipedia/en/thumb/9/92/Hum_Tum_%28film%29_poster.jpg/220px-Hum_Tum_%28film%29_poster.jpg" alt="Movie 39"></a>
+            <a href="https://t.me/Moviescreen024/556"><img src="https://upload.wikimedia.org/wikipedia/en/9/9f/Jab_We_Met_Poster.jpg" alt="Movie 40"></a>
+            <a href="https://t.me/Moviescreen024/557"><img src="https://upload.wikimedia.org/wikipedia/en/0/0e/Jodhaa_akbar.jpg" alt="Movie 41"></a>
+            <a href="https://t.me/Moviescreen024/558"><img src="https://upload.wikimedia.org/wikipedia/en/7/7d/Kabhi_Alvida_Naa_Kehna.jpg" alt="Movie 42"></a>
+            <a href="https://t.me/Moviescreen024/559"><img src="https://upload.wikimedia.org/wikipedia/en/4/4d/Kabhi_Khushi_Kabhie_Gham..._poster.jpg" alt="Movie 43"></a>
+            <a href="https://t.me/Moviescreen024/560"><img src="https://upload.wikimedia.org/wikipedia/en/4/45/Kal_Ho_Naa_Ho.jpg" alt="Movie 44"></a>
+            <a href="https://t.me/Moviescreen024/561"><img src="https://upload.wikimedia.org/wikipedia/en/8/8b/Karan_Arjun.jpg" alt="Movie 45"></a>
+            <a href="https://t.me/Moviescreen024/563kgf"><img src="https://resizing.flixster.com/qO53dQK8Q2ED_EgNuRKtKGQPODs=/ems.cHJkLWVtcy1hc3NldHMvbW92aWVzLzEwYTllYmMyLTE5N2EtNDVmYy1iZWUzLWI3NTAwZDEwZGQ2Yi53ZWJw" alt="Movie 46"></a>
+            <a href="https://t.me/Moviescreen024/564"><img src="https://upload.wikimedia.org/wikipedia/en/d/d0/K.G.F_Chapter_2.jpg" alt="Movie 47"></a>
+            <a href="https://t.me/Moviescreen024/565"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvcvKd07PiUaQKKVsa79t8zADy_GbJbMKP0A&s" alt="Movie 48"></a>
+            <a href="https://t.me/Moviescreen024/566"><img src="https://upload.wikimedia.org/wikipedia/en/e/ef/Koi..._Mil_Gaya_poster.jpg" alt="Movie 49"></a>
+            <a href="https://t.me/Moviescreen024/567"><img src="https://upload.wikimedia.org/wikipedia/en/9/95/Krrish_poster.jpg" alt="Movie 50"></a>
+            <a href="https://t.me/Moviescreen024/568"><img src="https://upload.wikimedia.org/wikipedia/en/thumb/2/28/Krrish_3_%282013_film%29_poster.jpg/220px-Krrish_3_%282013_film%29_poster.jpg" alt="Movie 51"></a>
+            <a href="https://t.me/Moviescreen024/569"><img src="https://upload.wikimedia.org/wikipedia/en/b/b6/Lagaan.jpg" alt="Movie 52"></a>
+            <a href="https://t.me/Moviescreen024/570"><img src="https://upload.wikimedia.org/wikipedia/en/3/35/Lage_raho_munna_bhai.JPG" alt="Movie 53"></a>
+            <a href="https://t.me/Moviescreen024/571"><img src="https://upload.wikimedia.org/wikipedia/en/thumb/e/e7/Love_Aaj_Kal_2009_poster.jpg/220px-Love_Aaj_Kal_2009_poster.jpg" alt="Movie 54"></a>
+            <a href="https://t.me/Moviescreen024/572"><img src="https://upload.wikimedia.org/wikipedia/en/thumb/9/96/Maine_Pyar_Kiya.jpg/220px-Maine_Pyar_Kiya.jpg" alt="Movie 55"></a>
+            <a href="https://t.me/Moviescreen024/573"><img src="https://upload.wikimedia.org/wikipedia/en/b/b5/Manmarziyaan_official_poster.jpg" alt="Movie 56"></a>
+            <a href="https://t.me/Moviescreen024/574"><img src="https://upload.wikimedia.org/wikipedia/hi/0/0d/%E0%A4%AE%E0%A4%B8%E0%A4%BE%E0%A4%A8_%E0%A4%AB%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%AE_%E0%A4%95%E0%A4%BE_%E0%A4%AA%E0%A5%8B%E0%A4%B8%E0%A5%8D%E0%A4%9F%E0%A4%B0.jpeg" alt="Movie 57"></a>
+            <a href="https://t.me/Moviescreen024/575"><img src="https://upload.wikimedia.org/wikipedia/en/a/ae/Raanjhanaafilmposter.jpg" alt="Movie 58"></a>
+            <a href="https://t.me/Moviescreen024/576"><img src="https://upload.wikimedia.org/wikipedia/en/f/f8/Great_Grand_Masti_poster.jpg" alt="Movie 59"></a>
+            <a href="https://t.me/Moviescreen024/577"><img src="https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p159170_p_v10_ad.jpg" alt="Movie 60"></a>
+            <a href="https://t.me/Moviescreen024/578"><img src="https://upload.wikimedia.org/wikipedia/en/b/b7/Mission_Mangal.jpg" alt="Movie 61"></a>
+            <a href="https://t.me/Moviescreen024/579"><img src="https://upload.wikimedia.org/wikipedia/en/9/94/Mohabbatein.jpg" alt="Movie 62"></a>
+            <a href="https://t.me/Moviescreen024/580"><img src="https://upload.wikimedia.org/wikipedia/en/1/16/Mughal-e-Azam.jpg" alt="Movie 63"></a>
+            <a href="https://t.me/Moviescreen024/581"><img src="https://upload.wikimedia.org/wikipedia/en/thumb/8/84/Munna_Bhai_M.B.B.S._poster.jpg/220px-Munna_Bhai_M.B.B.S._poster.jpg" alt="Movie 64"></a>
+            <a href="https://t.me/Moviescreen024/582"><img src="https://upload.wikimedia.org/wikipedia/en/5/5d/My_Name_Is_Khan_film_poster.jpg" alt="Movie 65"></a>
+            <a href="https://t.me/Moviescreen024/584"><img src="https://upload.wikimedia.org/wikipedia/en/7/73/Padmaavat_poster.jpg" alt="Movie 66"></a>
+            <a href="https://t.me/Moviescreen024/588"><img src="https://upload.wikimedia.org/wikipedia/en/c/c3/PK_poster.jpg" alt="Movie 67"></a>
+    <!--    <a href=""><img src="" alt="Movie 68"></a>
+            <a href=""><img src="" alt="Movie 69"></a>
+            <a href=""><img src="" alt="Movie 70"></a>
+            <a href=""><img src="" alt="Movie 71"></a>
+            <a href=""><img src="" alt="Movie 72"></a>
+            <a href=""><img src="" alt="Movie 73"></a>
+            <a href=""><img src="" alt="Movie 74"></a>
+            <a href=""><img src="" alt="Movie 75"></a>
+            <a href=""><img src="" alt="Movie 76"></a>
+            <a href=""><img src="" alt="Movie 77"></a>
+            <a href=""><img src="" alt="Movie 78"></a>
+            <a href=""><img src="" alt="Movie 79"></a>
+            <a href=""><img src="" alt="Movie 80"></a>
+            <a href=""><img src="" alt="Movie 81"></a>
+            <a href=""><img src="" alt="Movie 82"></a>
+            <a href=""><img src="" alt="Movie 83"></a>
+            <a href=""><img src="" alt="Movie 84"></a>
+            <a href=""><img src="" alt="Movie 85"></a>
+            <a href=""><img src="" alt="Movie 86"></a>
+            <a href=""><img src="" alt="Movie 87"></a>
+            <a href=""><img src="" alt="Movie 88"></a>
+            <a href=""><img src="" alt="Movie 89"></a>
+            <a href=""><img src="" alt="Movie 90"></a>
+            <a href=""><img src="" alt="Movie 91"></a>
+            <a href=""><img src="" alt="Movie 92"></a>
+            <a href=""><img src="" alt="Movie 93"></a>
+            <a href=""><img src="" alt="Movie 94"></a>
+            <a href=""><img src="" alt="Movie 95"></a>
+            <a href=""><img src="" alt="Movie 96"></a>
+            <a href=""><img src="" alt="Movie 97"></a>
+            <a href=""><img src="" alt="Movie 98"></a>
+            <a href=""><img src="" alt="Movie 99"></a>
+            <a href=""><img src="" alt="Movie 100"></a>
+        -->
+
+            
+        </div>
+    </div>
+
+    <div class="M24M">
+        <h1><b>Movies 2024</b></h1>
+        <div class="slideMov">
+            <a href="https://t.me/Moviescreen024/19"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQA14CXcr1VVxwAO9yW8ul6U08Xl_L8PT1wpQ&s" alt="Movie 1"></a>
+            <a href="https://t.me/Moviescreen024/591"><img src="https://upload.wikimedia.org/wikipedia/en/thumb/9/90/Animal_%282023_film%29_poster.jpg/220px-Animal_%282023_film%29_poster.jpg" alt="Movie 2"></a>
+            <a href="https://t.me/Moviescreen024/593"><img src="https://upload.wikimedia.org/wikipedia/en/4/4f/Dunki_poster.jpg" alt="Movie 3"></a>
+            <a href="https://t.me/Moviescreen024/594"><img src="https://upload.wikimedia.org/wikipedia/en/e/e1/Chandu_Champion_film_poster.jpg" alt="Movie 4"></a>
+            <a href="https://t.me/Moviescreen024/595"><img src="https://upload.wikimedia.org/wikipedia/en/8/8f/Crew_2024_film_poster.jpeg" alt="Movie 5"></a>
+            
+        </div>
+    </div>
+
+    <div class="Upcoming">
+        <h1><b>Upcoming Movies</b></h1>
+        <div class="slideMov">
+            <a href="https://t.me/Moviescreen024"><img src="https://akm-img-a-in.tosshub.com/indiatoday/images/story/202408/stree-2-box-office-records-on-day-1-6-staggering-opening-day-wins-by-the-film-163709211-16x9_1.jpg?VersionId=ItzafclRZ374UlSb6gx3wbqnIaJvXxEl&size=690:388" alt="Movie 1"></a>
+            <a href="https://t.me/Moviescreen024/33"><img src="https://www.bollywoodhungama.com/wp-content/uploads/2022/11/Pathaan-6.jpg" alt="Movie 2"></a>
+            <a href="http://t.me/marvelinkz"><img src="https://en-media.thebetterindia.com/uploads/2024/09/laapataa-ladies-1727091156.jpg" alt="Movie 3"></a>
+            <a href="https://t.me/Moviescreen024/20"><img src="https://i.ytimg.com/vi/sp3Io6rcA8E/maxresdefault.jpg" alt="Movie 4"></a>
+            <a href="https://t.me/Moviescreen024/19"><img src="https://i.ytimg.com/vi/MD7v0-igVIM/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLDqKw87wEXGkROIrcH7hxnq_zhxCA" alt="Movie 5"></a>
+        </div>
+    </div>
+
+
+    <footer>
+        <h2>Contact Us</h2>
+        <div class="contact-info">
+            <p>Email: <a href="mailto:example@example.com">theraj875@gmail.com</a></p>
+           
+            <!-- <p>Address: 123, Your Street, Your City, Your Country</p> -->
+        </div>
+
+        <p class="thanks">Thank you for visiting our website! We hope you had a great experience.</p>
+
+        <div class="social-icons">
+        <a href="https://www.facebook.com" target="_blank" class="fab fa-facebook"></a>
+        <a href="https://www.twitter.com" target="_blank" class="fab fa-twitter"></a>
+        <a href="https://www.instagram.com" target="_blank" class="fab fa-instagram"></a>
+        <a href="https://www.linkedin.com" target="_blank" class="fab fa-linkedin"></a>
+    </div>
+
+        <p>&copy; 2024 Your Company. All rights reserved.</p>
+    </footer> 
+
+
+</body>
+</html>

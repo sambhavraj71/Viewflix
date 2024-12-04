@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Viewflix</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" type="image/png" href="viewflixlogo.webp">
+    
+    <style>
+
+
+        
+    
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: black;
+            color: white;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+        }
+
+        .left h1 {
+            color: red;
+        }
+
+        .right img {
+            width: 50px;
+        }
+
+        .abody {
+            background-color: #1a1a1a;
+            flex: 1;
+        }
+
+        .Trending {
+            width: 100%;
+            background-color: #1a1a1a;
+            padding: 20px 0;
+        }
+
+        .Trendig_Movie, .Trendig_Webseries {
+            font-family: 'Courier New', Courier, monospace;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        .slideMov, .slideMov2 {
+            display: flex;
+            overflow-x: scroll;
+            padding: 10px 0;
+            gap: 10px;
+            scroll-snap-type: x mandatory;
+        }
+
+        .slideMov img, .slideMov2 img {
+            width: 300px;
+            height: 450px;
+            object-fit: cover;
+            border: 5px solid gold;
+            scroll-snap-align: center;
+        }
+
+        .Trendig_Movie h1, .Trendig_Webseries h1 {
+            text-align: center;
+            margin-bottom: 10px;
+            font-size: 24px;
+            color: gold;
+        }
+
+        .Movies, .Webseries {
+            padding: 20px 0;
+        }
+
+        .Moviestag, .Webseries .left_webseries {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        /* Updated styles for the images inside the links */
+.slideMov a img, .slideMov2 a img {
+    display: block;  /* Ensures the images are block-level elements */
+    width: 300px;    /* Maintain the size */
+    height: 450px;   /* Maintain the height */
+    object-fit: cover;
+    border: 5px solid gold;
+    scroll-snap-align: center;
+}
+
+/* Ensure that the image sizes don't shrink inside the container */
+.slideMov img, .slideMov2 img {
+    width: 300px;
+    height: 450px;
+    object-fit: cover;
+    border: 5px solid gold;
+    scroll-snap-align: center;
+}
+
+
+        .right_movies, .right_webseries {
+            padding-right: 20px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: gold;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            
+        }
+        a {
+            color: inherit; /* Default text color */
+            text-decoration: none; /* Removes underline */
+        }
+
+        .moviecontainer, .webseriescontainer {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            flex-wrap: wrap;
+            padding: 20px;
+        }
+
+        .moviecontainer img, .webseriescontainer img {
+            width: 100px;
+            height: 150px;
+            object-fit: cover;
+            border: 2px solid gold;
+        }
+
+        /* Make the slideshow more responsive */
+        @media (max-width: 768px) {
+            .slideMov img, .slideMov2 img {
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        /* Fix for the "More" button in Webseries section */
+        .Webseries {
+            padding: 20px 0;
+        }
+
+        .left_webseries {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            flex: 1;
+        }
+
+        .right_webseries {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
+
+        .right_webseries button {
+            padding: 10px 20px;
+            background-color: gold;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+
+
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+        }
+
+        footer h2 {
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+
+        footer p {
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+        .contact-info {
+            margin-bottom: 20px;
+        }
+
+        .contact-info a {
+            color: #ffcc00;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+
+        .thanks {
+            font-size: 18px;
+            color: #ffcc00;
+        }
+
+        .social-icons {
+            margin-top: 20px;
+        }
+
+        .social-icons a {
+            color: white;
+            margin: 0 15px;
+            font-size: 20px;
+            text-decoration: none;
+        }
+
+        .social-icons a:hover {
+            color: #ffcc00;
+        }
+
+        .social-icons a {
+            text-decoration: none;
+            color: #333;
+            font-size: 24px;
+            margin: 0 10px;
+        }
+        .social-icons a:hover {
+            color: #0073e6; /* Change color on hover */
+        }
+
+
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <div class="left">
+            <h1>Viewflix</h1>
+            <p>A online platform to watch movie & webseries.</p>
+        </div>
+        <div class="right">
+            <img src="viewflixlogo.webp" width="50px">
+        </div>
+    </div>
+
+    <div class="abody">
+        <div class="Trending">
+            <!-- Trending Movies Section -->
+            <div class="Trendig_Movie">
+                <h1><b>Trending Movies</b></h1>
+                <div class="slideMov">
+                    <a href="https://t.me/Moviescreen024/31"><img src="https://akm-img-a-in.tosshub.com/indiatoday/images/story/202408/stree-2-box-office-records-on-day-1-6-staggering-opening-day-wins-by-the-film-163709211-16x9_1.jpg?VersionId=ItzafclRZ374UlSb6gx3wbqnIaJvXxEl&size=690:388" alt="Movie 1"></a>
+                    <a href="https://t.me/Moviescreen024/33"><img src="https://www.bollywoodhungama.com/wp-content/uploads/2022/11/Pathaan-6.jpg" alt="Movie 2"></a>
+                    <a href="http://t.me/marvelinkz"><img src="https://en-media.thebetterindia.com/uploads/2024/09/laapataa-ladies-1727091156.jpg" alt="Movie 3"></a>
+                    <a href="https://t.me/Moviescreen024/20"><img src="https://i.ytimg.com/vi/sp3Io6rcA8E/maxresdefault.jpg" alt="Movie 4"></a>
+                    <a href="https://t.me/Moviescreen024/19"><img src="https://i.ytimg.com/vi/MD7v0-igVIM/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLDqKw87wEXGkROIrcH7hxnq_zhxCA" alt="Movie 5"></a>
+                </div>
+            </div>
+
+            <!-- Trending Webseries Section -->
+            <div class="Trendig_Webseries">
+                <h1><b>Trending Webseries</b></h1>
+                <div class="slideMov2">
+                    <a href="https://t.me/Moviescreen024/34"><img src="https://lehren.com/wp-content/uploads/2024/11/Yeh-Kaali-Kaali-Aankhen-BP-Maam-Review.jpg" alt="Webseries 1"></a>
+                    <a href="https://t.me/Moviescreen024/37"><img src="https://static.tnn.in/thumb/msid-108636256,thumbsize-115556,width-1280,height-720,resizemode-75/108636256.jpg" alt="Webseries 2"></a>
+                    <a href="https://t.me/Moviescreen024/39"><img src="https://i.ytimg.com/vi/9N3cFoLFjvw/maxresdefault.jpg" alt="Webseries 3"></a>
+                    <img src="https://occ-0-2085-2164.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABUH8NFZMMoPr4JHVJVTz0t8ZY3IKkRwitkL5wRWonK7zgc8Olm1rho7z8f0uIzkMcZmi6R8G4JLil1c3qM4UhfZ2EeRvrRGxkyX7vzbu4dynk5YVXTd4LUbrEeNsr7sSySHG.jpg" alt="Webseries 4">
+                    <a href="https://youtube.com/playlist?list=PLjwBf9QEIO97A_93SKN0zbY2XLErnPcT-&si=jiaf5X5mVc3fyTWP"><img src="https://images.ottplay.com/articles/2021q4/YouTuber_Bhuvan_Bam_OTTplay_news_cover_image_1_304.jpeg" alt="Webseries 5">
+                </div>
+            </div>
+        </div>
+
+        <div class="Movies">
+            <div class="Moviestag">
+                <div class="left_movies">
+                    <h1><b>All Movies</b></h1>
+                </div>
+                <div class="right_movies">
+                    <button><a href="all_movies.html"><b>More</b></a></button>
+                </div>
+            </div>
+            <div class="moviecontainer">
+                <a href="https://t.me/Moviescreen024/505"><img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTJNFwA3SGP0s5THFEA9EPEWk1uqrDx3JgBBfQpfZBTzfzwkR65" alt="Movie 1"></a>
+                <a href="https://t.me/Moviescreen024/506"><img src="https://upload.wikimedia.org/wikipedia/en/b/b5/Poster_Boys_poster.jpg" alt="Movie 2"></a>
+                <a href="https://t.me/Moviescreen024/507"><img src="https://upload.wikimedia.org/wikipedia/en/9/9c/Yudhra_film_poster.jpg" alt="Movie 3"></a>
+            </div>
+        </div>
+
+        <div class="Webseries">
+            <div class="Moviestag">
+                <div class="left_webseries">
+                    <h1><b>All Webseries</b></h1>
+                </div>
+                <div class="right_webseries">
+                    <button><a href="all_webseries.html"><b>More</b></a></button>
+                </div>
+            </div>
+            <div class="webseriescontainer">
+                <a href="https://t.me/Moviescreen024/508"><img src="https://upload.wikimedia.org/wikipedia/en/7/75/Ishq_Express.jpg" alt="Webseries 1"></a>
+                <a href="https://t.me/Moviescreen024/509"><img src="https://assets.gadgets360cdn.com/pricee/assets/product/202306/UP65_1685691696.jpg"></a>
+                <a href="https://t.me/Moviescreen024/511"><img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRozXRE4oMmMybGPC4WQkMHMmU8j0Qsg9HYJQCozi1Cg3Mha7j5oI-TliQhDeQR460I3ih87Q"></a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <h2>Contact Us</h2>
+        <div class="contact-info">
+            <p>Email: <a href="mailto:example@example.com">theraj875@gmail.com</a></p>
+           
+            <!-- <p>Address: 123, Your Street, Your City, Your Country</p> -->
+        </div>
+
+        <p class="thanks">Thank you for visiting our website! We hope you had a great experience.</p>
+
+        <div class="social-icons">
+            <a href="https://www.facebook.com" target="_blank" class="fab fa-facebook"></a>
+            <a href="https://www.twitter.com" target="_blank" class="fab fa-twitter"></a>
+            <a href="https://www.instagram.com" target="_blank" class="fab fa-instagram"></a>
+            <a href="https://www.linkedin.com" target="_blank" class="fab fa-linkedin"></a>
+        </div>
+
+        <p>&copy; 2024 Your Company. All rights reserved.</p>
+    </footer> 
+</body>
+</html>
