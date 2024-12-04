@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>All Movies</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="icon" type="image/png" href="viewflixlogo.webp">
     <style>
         * {
@@ -37,7 +38,7 @@
         }
 
         .A2Z, .M24M, .Upcoming {
-            font-family: 'Courier New', Courier, monospace;
+            font-family: 'Pacifico', cursive;
             width: 100%;
             margin-bottom: 20px;
         }
@@ -63,6 +64,16 @@
             margin-bottom: 10px;
             font-size: 24px;
             color: gold;
+        }
+
+        .A2Z img, .M24M img, .Upcoming img{
+            display: block;  /* Ensures the images are block-level elements */
+            width: 100px;    /* Maintain the size */
+            height: 150px;   /* Maintain the height */
+            object-fit: cover;
+            border: 2px solid #b4cf1b;
+            scroll-snap-align: center;
+            border-radius: 20px;
         }
 
         @media (max-width: 768px) {
@@ -122,20 +133,21 @@
         }
 
         .social-icons a {
-            color: white;
+            color: rgb(239, 232, 232);
             margin: 0 15px;
             font-size: 20px;
             text-decoration: none;
         }
 
         .social-icons a:hover {
-            color: #ffcc00;
+            color: #7c37e2;
         }
 
         .social-icons a {
             text-decoration: none;
-            color: #333;
+            color: #2f2f80;
             font-size: 24px;
+            padding-bottom: 15px;
             margin: 0 10px;
         }
         .social-icons a:hover {
@@ -157,7 +169,7 @@
     </div>
 
     <div class="A2Z">
-        <h1><b>A to Z movies</b></h1>
+        <h1 style="font-size: 25px;"><b>A to Z movies</b></h1>
         <div class="slideMov">
             <a href="https://t.me/Moviescreen024/513"><img src="https://upload.wikimedia.org/wikipedia/en/d/df/3_idiots_poster.jpg" alt="Movie 1"></a>
             <a href="https://t.me/Moviescreen024/514"><img src="https://upload.wikimedia.org/wikipedia/en/thumb/4/4f/Aashiqui_2.jpeg/220px-Aashiqui_2.jpeg" alt="Movie 2"></a>
@@ -266,7 +278,7 @@
     </div>
 
     <div class="M24M">
-        <h1><b>Movies 2024</b></h1>
+        <h1 style="font-size: 25px;"><b>Movies 2024</b></h1>
         <div class="slideMov">
             <a href="https://t.me/Moviescreen024/19"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQA14CXcr1VVxwAO9yW8ul6U08Xl_L8PT1wpQ&s" alt="Movie 1"></a>
             <a href="https://t.me/Moviescreen024/591"><img src="https://upload.wikimedia.org/wikipedia/en/thumb/9/90/Animal_%282023_film%29_poster.jpg/220px-Animal_%282023_film%29_poster.jpg" alt="Movie 2"></a>
@@ -278,7 +290,7 @@
     </div>
 
     <div class="Upcoming">
-        <h1><b>Upcoming Movies</b></h1>
+        <h1 style="font-size: 25px;"><b>Upcoming Movies</b></h1>
         <div class="slideMov">
             <a href="https://t.me/Moviescreen024"><img src="https://akm-img-a-in.tosshub.com/indiatoday/images/story/202408/stree-2-box-office-records-on-day-1-6-staggering-opening-day-wins-by-the-film-163709211-16x9_1.jpg?VersionId=ItzafclRZ374UlSb6gx3wbqnIaJvXxEl&size=690:388" alt="Movie 1"></a>
             <a href="https://t.me/Moviescreen024/33"><img src="https://www.bollywoodhungama.com/wp-content/uploads/2022/11/Pathaan-6.jpg" alt="Movie 2"></a>
