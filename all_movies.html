@@ -90,7 +90,42 @@
         }
 
 
+        .back-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px; /* Space between arrow and text */
+    background: linear-gradient(45deg, #ff414d, #ff914d); /* Gradient background */
+    color: white;
+    width: 90px;
+    height: 30px;
+    padding: 12px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 16px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3); /* Shadow for depth */
+    transition: all 0.3s ease-in-out; /* Smooth animation on hover */
+    text-decoration: none;
+}
 
+/* Arrow inside the back button */
+.back-button .arrow {
+    font-size: 10px;
+    font-weight: bold;
+}
+
+/* Hover effect for the back button */
+.back-button:hover {
+    transform: scale(1.1); /* Slightly enlarge */
+    box-shadow: 0px 6px 12px rgba(255, 65, 77, 0.6); /* Glowing shadow */
+}
+
+/* Add active click effect */
+.back-button:active {
+    transform: scale(0.95); /* Shrinks slightly when clicked */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4); /* Reduce shadow */
+}
 
         footer {
             background-color: #333;
@@ -298,9 +333,12 @@
             <a href="https://t.me/Moviescreen024/20"><img src="https://i.ytimg.com/vi/sp3Io6rcA8E/maxresdefault.jpg" alt="Movie 4"></a>
             <a href="https://t.me/Moviescreen024/19"><img src="https://i.ytimg.com/vi/MD7v0-igVIM/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLDqKw87wEXGkROIrcH7hxnq_zhxCA" alt="Movie 5"></a>
         </div>
+        <div class="back-button" onclick="goBack()">
+            <span class="arrow">&#8592;</span> <!-- Left arrow -->
+            <span class="text">Back</span>
+        </div>
+       
     </div>
-
-
     <footer>
         <h2>Contact Us</h2>
         <div class="contact-info">
@@ -323,4 +361,15 @@
 
 
 </body>
+
+<script>
+    // JavaScript to navigate to the previous page or a specific URL
+    function goBack() {
+        // Uncomment the line below to navigate to a specific page (e.g., "home.html")
+        window.location.href = "index.html";
+
+        // Go back to the previous page
+        window.history.back();
+    }
+</script>
 </html>
